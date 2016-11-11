@@ -15,6 +15,10 @@
         {
             apologize("You must provide your ID.");
         }
+        if (empty($_POST["name"]))
+        {
+            apologize("You must provide your name.");
+        }
         else if (empty($_POST["phone"]))
         {
             apologize("You must provide your phone for contacting others.");
@@ -31,7 +35,7 @@
         {
             apologize("Passwords do not match.");
         }
-        if(query("INSERT INTO embryo_members (member_id, hash, phone_no) VALUES(?, ?, ?)", $_POST["id"], crypt($_POST["password"]), $_POST["phone"]) === false)
+        if(query("INSERT INTO embryo_members (member_id, name, hash, phone_no) VALUES(?, ?, ?, ?)", $_POST["id"],  $_POST["name"], crypt($_POST["password"]), $_POST["phone"]) === false)
         {
             apologize("ID already exists.");
         }

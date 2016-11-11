@@ -1,3 +1,16 @@
+<style>  iframe {
+                z-index : -9999;
+                position: absolute;
+                top : 0;
+                left    : 0;
+                width   : 100%;
+                height  : 100%;
+                margin  : 0;
+                padding : 0;
+                border: 0;
+            }
+        </style>    
+<iframe src="../templates/anim.html"></iframe> 
 <div class="row">
     <div class="col-lg-6">
         <h2>

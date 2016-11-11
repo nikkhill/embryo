@@ -3,7 +3,7 @@
     // configuration
     require("../includes/config.php"); 
 
-    echo "Hi!", $_SESSION["id"];
+    // echo "Hi!", $_SESSION["id"];
     // $rows = query("SELECT * FROM allbooks WHERE id = {$_SESSION["id"]}");
     
     // $positions = [];
@@ -22,7 +22,7 @@
     // }
     // else
     // {
-    //     render("portfolio.php", ["positions" => $positions, "title" => "My Books"]);
+    render("home.php", ["title" => "Home"]);
     // }
     
 ?>
