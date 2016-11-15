@@ -15,7 +15,7 @@
 
         else
         {              
-            query("UPDATE embryo_members SET account_status = 1 WHERE id = '{$_POST["id"]}'");
+            query("UPDATE embryo_members SET account_status = 1, role = '{$_POST["role"]}' WHERE id = '{$_POST["id"]}'");
             redirect("members.php");           
         }
 	}
