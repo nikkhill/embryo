@@ -17,7 +17,19 @@
             <input autofocus class="form-control" name="username" placeholder="Username ?" type="text"/>
         </div>      --> 
         <div class="form-group">
-            Speaker ID:<input autofocus class="form-control" name="sid" placeholder="XXXXXX" type="text"/>
+            Speaker:
+            <?php
+                $con = mysqli_connect("localhost", "root", "", "embryo_data");
+                $query = mysqli_query($con, "SELECT sid,name from speaker");
+                echo '<select name="sid">';
+                echo '<option value="0">Select Speaker</option>';
+                while($row = mysqli_fetch_array($query))
+                {
+                    echo '<option value="'.$row['sid'].'">'.$row['name'].'</option>';
+                }
+                echo '</select>';
+            ?>
+            <!--Speaker:<input autofocus class="form-control" name="sid" placeholder="XXXXXX" type="text"/>-->
         </div>     
         <div class="form-group">
             Confirmation Status: <input autofocus class="form-control" name="confirmation_status" placeholder="Default:Pending" type="text"/>
