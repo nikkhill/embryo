@@ -3,8 +3,9 @@
 <html>
 
     <head>
-        <link href="/css/styles.css" rel="stylesheet" media="screen"/>
-        <link href="/css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="../public/css/styles.css" rel="stylesheet" media="screen"/>
+        <link href="../public/css/bootstrap.min.css" rel="stylesheet"/>
+        
         
         <?php if (isset($title)): ?>
             <title>BITS Embryo: <?= htmlspecialchars($title) ?></title>
@@ -12,9 +13,9 @@
             <title>BITS Embryo</title>
         <?php endif ?>
 
-        <script src="/js/jquery-1.10.2.min.js"></script>
-        <script src="/js/bootstrap.min.js"></script>
-        <script src="/js/scripts.js"></script>
+        <script src="../public/js/jquery-1.10.2.min.js"></script>
+        <script src="../public/js/bootstrap.min.js"></script>
+        <script src="../public/js/scripts.js"></script>
         <style>
             td {
                 text-align : left;                
@@ -49,6 +50,7 @@
                     print('<li><a href="events.php">Events</a></li>');
                     print('<li><a href="query.php">Query</a></li>');
                     print('<li><a href="new_event.php">New Event</a></li>');
+                    print('<li><a href="members.php">Members</a></li>');
                 }
                 
             ?>         
