@@ -15,7 +15,7 @@
         $confirmation_status = 'Pending';
         $draft_URL = null;
         $proposed_expenditure = null;
-        if (empty($_POST["sid"]))
+        if (empty($_POST["sid"]) || $_POST["sid"]==="0")
         {
             apologize("You must provide the ID of the Speaker.");
         }
@@ -46,8 +46,7 @@
         }
         else
         {
-            echo("Event added successfully");
-            redirect("new_event.php");
+            successmessage("Event successfully added", "new_event.php");
         }
     }
     else
