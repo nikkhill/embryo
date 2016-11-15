@@ -49,6 +49,7 @@
                     print('<li><a href="events.php">Events</a></li>');
                     print('<li><a href="query.php">Query</a></li>');
                     print('<li><a href="new_event.php">New Event</a></li>');
+                    print('<li><a href="members.php">Members</a></li>');
                 }
                 
             ?>         
