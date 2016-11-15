@@ -19,6 +19,12 @@
         render("apology.php", ["message" => $message]);
         exit;
     }
+    
+    function successmessage($message,$page)
+    {
+        render("success.php", ["message"=>$message], ["page"=>$page]);
+        exit;
+    }
 
     /**
      * Facilitates debugging by dumping contents of variable
