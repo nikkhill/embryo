@@ -4,11 +4,11 @@
     require("../includes/config.php"); 
 
 	if ($_SERVER["REQUEST_METHOD"] == "GET")  {
-	    $rows = query("SELECT sid, name, organization FROM speaker");      
-	    $organizations = query("SELECT DISTINCT organization FROM speaker");
-	    $fields = query("SELECT DISTINCT field FROM speaker");
-	    $designations = query("SELECT DISTINCT designation FROM speaker");
-	    $point_of_contacts = query("SELECT member_id FROM embryo_members");
+	    $rows = query("SELECT sid, name, organization FROM speaker order by name");      
+	    $organizations = query("SELECT DISTINCT organization FROM speaker order by name");
+	    $fields = query("SELECT DISTINCT field FROM speaker order by name");
+	    $designations = query("SELECT DISTINCT designation FROM speaker order by name");
+	    $point_of_contacts = query("SELECT member_id,name FROM embryo_members");
 	    //query("INSERT INTO history (id, symbol, type, shares, price) VALUES({$_SESSION["id"]}, '$sym', {$_POST["shares"]})");  
 
 	    render("speakers_display.php", ["title" => "Speakers", "rows" => $rows, "organizations" => $organizations, "fields" => $fields, "designations" => $designations, "point_of_contacts" => $point_of_contacts]);
