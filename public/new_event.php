@@ -52,7 +52,7 @@
     else
     {
         // else render form
-        render("new_event_form.php", ["title" => "Add new event"]);
+        render("new_event_form.php", ["title" => "Propose new event"]);
     }
 
 ?>
