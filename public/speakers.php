@@ -33,7 +33,7 @@
 	    $organizations = query("SELECT DISTINCT organization FROM speaker order by name");
 	    $fields = query("SELECT DISTINCT field FROM speaker order by name");
 	    $designations = query("SELECT DISTINCT designation FROM speaker order by name");
-	    $point_of_contacts = query("SELECT member_id FROM embryo_members order by name");
+	    $point_of_contacts = query("SELECT member_id,name FROM embryo_members order by name");
 
 	    render("speakers_display.php", ["title" => "Speakers", "rows" => $rows, "organizations" => $organizations, "fields" => $fields, "designations" => $designations, "point_of_contacts" => $point_of_contacts]);
 	}
