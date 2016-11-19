@@ -105,14 +105,14 @@
                     <div class="form-group">
                         <input autofocus class="form-control" name="address" placeholder="Address" type="text"/>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group"> Date of first contact:<br>
                         <input autofocus class="form-control" name="date_of_first_contact" placeholder="Date of first contact" type="date"/>
                     </div>
-                    <div class="form-group" id="point_of_contact_input"> Point of contact: 
+                    <div class="form-group" id="point_of_contact_input"> Point of contact:<br> 
                         <select class="form-control" id="select_point_of_contact" name="point_of_contact">
                           <?php 
                             foreach ($point_of_contacts as $opt) {
-                                echo "<option value=\"".$opt["member_id"]. "\">".$opt["member_id"]."</option>";
+                                echo "<option value=\"".$opt["member_id"]. "\">".$opt["name"]."</option>";
                             }
                           ?>
                         </select>
