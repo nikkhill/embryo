@@ -1,13 +1,19 @@
+<style>
+td{
+    padding : 10px;
+}
+</style>
 <div>
-    <?php        
-        print("<p>Name: <strong>{$info[0]["name"]}</strong></p>");
-        print("<p>Organization: <strong>{$info[0]["organization"]}</strong></p>");
-        print("<p>Field: <strong>{$info[0]["field"]}</strong></p>");
-        print("<p>E-mail: <strong>{$info[0]["email_id"]}</strong></p>");
-        print("<p>Address: <strong>{$info[0]["address"]}</strong></p>");        
-        print("<p>Date of first contact: <strong>{$info[0]["date_of_first_contact"]}</strong></p>");
-        print("<p>Point of contact: <strong>{$info[0]["point_of_contact"]}</strong></p>");
-        print("<p>Phone: <strong>");
+    <?php    
+        print('<table style="margin:auto">');
+        print("<tr><td>Name: </td><td><strong>{$info[0]["name"]}</strong></td></tr>");
+        print("<tr><td>Organization: </td><td><strong>{$info[0]["organization"]}</strong></td></tr>");
+        print("<tr><td>Field: </td><td><strong>{$info[0]["field"]}</strong></td></tr>");
+        print("<tr><td>E-mail: </td><td><strong>{$info[0]["email_id"]}</strong></td></tr>");
+        print("<tr><td>Address: </td><td><strong>{$info[0]["address"]}</strong></td></tr>");        
+        print("<tr><td>Date of first contact: </td><td><strong>{$info[0]["date_of_first_contact"]}</strong></td></tr>");
+        print("<tr><td>Point of contact: </td><td><strong>{$info[0]["point_of_contact"]}</strong></td></tr>");
+        print("<tr><td>Phone: </td><td><strong>");
         $contacts = array();
 
         foreach ($contact as $row) {
@@ -15,6 +21,7 @@
         	array_push($contacts, $row["Phone_no"]);
         }
         echo join(", ", $contacts);
-        print("</strong></p>");
+        print("</strong></td></tr>");
+        print("</table>");
     ?>
 </div>
