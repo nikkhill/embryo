@@ -13,9 +13,6 @@
         <iframe src="../templates/anim.html"></iframe> 
 <form action="register.php" method="post">
     <fieldset>
-        <!-- <div class="form-group">
-            <input autofocus class="form-control" name="username" placeholder="Username ?" type="text"/>
-        </div>      --> 
         <div class="form-group">
             <input autofocus class="form-control" name="id" placeholder="ID: f20XXXXX?" type="text"/>
         </div>     

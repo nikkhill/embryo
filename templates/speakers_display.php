@@ -105,6 +105,9 @@
                     <div class="form-group">
                         <input autofocus class="form-control" name="address" placeholder="Address" type="text"/>
                     </div>
+                    <div class="form-group">
+                        <input autofocus class="form-control" name="phone" placeholder="Phone" type="text"/>
+                    </div>
                     <div class="form-group"> Date of first contact:<br>
                         <input autofocus class="form-control" name="date_of_first_contact" placeholder="Date of first contact" type="date"/>
                     </div>

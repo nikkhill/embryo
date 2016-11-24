@@ -9,7 +9,6 @@
 	    $fields = query("SELECT DISTINCT field FROM speaker order by name");
 	    $designations = query("SELECT DISTINCT designation FROM speaker order by name");
 	    $point_of_contacts = query("SELECT member_id,name FROM embryo_members");
-	    //query("INSERT INTO history (id, symbol, type, shares, price) VALUES({$_SESSION["id"]}, '$sym', {$_POST["shares"]})");  
 
 	    render("speakers_display.php", ["title" => "Speakers", "rows" => $rows, "organizations" => $organizations, "fields" => $fields, "designations" => $designations, "point_of_contacts" => $point_of_contacts]);
 	}
