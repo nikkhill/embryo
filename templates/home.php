@@ -23,13 +23,12 @@
         </table>
     </div>
     <div class="col-lg-6">
-        <h3>Proposed Events</h3>
+        <h3>Pending Proposals</h3>
         <table class="table table-striped table table-hover">
             <thead>
                 <tr>
                     <th>Speaker</th>
                     <th>Proposed Topic</th>
-                    <th>Confirmation Status</th>
                     <th>View Info</th>
                 </tr>
             </thead>
@@ -38,8 +37,8 @@
                     <tr>
                         <td><?= $prow["name"] ?></td>
                         <td><?= $prow["proposed_topic"] ?></td>
-                        <td><?= $prow["confirmation_status"] ?></td>
                         <td><?= "<a href=\"proposed_event_details.php?peid=" . $prow['peid'] . "\">More</a>"?></td>
+                        <td><?= "<a href=\"confirm_event_details.php?peid=" . $prow['peid'] . "\">Confirm</a>"?></td>
                     </tr>
                 <?php endforeach ?>            
             </tbody>
