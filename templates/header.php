@@ -48,9 +48,9 @@
                 {
                     print('<li><a href="speakers.php">Speakers</a></li>');
                     print('<li><a href="events.php">Events</a></li>');
-                    print('<li><a href="query.php">Query</a></li>');
                     print('<li><a href="new_event.php">New Event</a></li>');
                     print('<li><a href="members.php">Members</a></li>');
+                    print('<li><a href="my_account.php">My account</a></li>');
                 }
                 
             ?>         

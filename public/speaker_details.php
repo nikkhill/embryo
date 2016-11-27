@@ -6,5 +6,5 @@
     $id = $_GET["sid"];
     $info = query("SELECT * FROM speaker WHERE sid = $id");
     $contact = query("SELECT Phone_no FROM speaker_contact_info WHERE sid = $id");
-    render("speaker_details_display.php", ["title" => "Details", "info" => $info, "contact" => $contact]);
+    render("speaker_details_display.php", ["title" => "Details", "info" => $info, "contact" => $contact, "id" => $id]);
 ?>
