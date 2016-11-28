@@ -50,13 +50,17 @@
         {
             $poster_status = $_POST["poster_status"];
         }
-        
+        if(query("UPDATE proposed_event set confirmation_status='Confirmed' where peid = ".$_POST["peid"])===false)
+            {
+                apologize("Error");
+            }
         if(query("INSERT INTO event(peid,topic,event_date,type,room,video_status,article_status,poster_status,feedback_status,team_id,expenditure) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", $_POST["peid"], $_POST["topic"], $_POST["event_date"], $_POST["type"], $room, $video_status, $article_status, $poster_status, $feedback_status,null,$expenditure) === false)
         {
             apologize("Event already exists.");
         }
         else
         {
+            
             successmessage("Event successfully added", "home.php");
         }
     }
@@ -64,7 +68,7 @@
     {
         // else render form
         
-    $peid = $_GET["peid"];
+        $peid = $_GET["peid"];
         render("confirm_event_form.php", ["title" => "Event Details", "peid" => $peid]);
     }
 

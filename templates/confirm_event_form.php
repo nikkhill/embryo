@@ -1,3 +1,7 @@
+<?php
+    
+?>
+
 <form action="confirm_event_details.php" method="post">
     <fieldset>
         <!-- <div class="form-group">
@@ -24,23 +28,23 @@
         </div>
         <div class="form-group">
             <select autofocus class="form-control" id="select_video_status" name="video_status">
-                <option value="FALSE">Video Status</option>
-                <option value="TRUE">Ready</option>
-                <option value="FALSE">Pending</option>
+                <option value="0">Video Status</option>
+                <option value="1">Ready</option>
+                <option value="0">Pending</option>
             </select>
         </div>
         <div class="form-group">
             <select autofocus class="form-control" id="select_article_status" name="article_status">
-                <option value="FALSE">Article Status</option>
-                <option value="TRUE">Ready</option>
-                <option value="FALSE">Pending</option>
+                <option value="0">Article Status</option>
+                <option value="1">Ready</option>
+                <option value="0">Pending</option>
             </select>
         </div>
         <div class="form-group">
             <select autofocus class="form-control" id="select_poster_status" name="poster_status">
-                <option value="FALSE">Poster Status</option>
-                <option value="TRUE">Ready</option>
-                <option value="FALSE">Pending</option>
+                <option value="0">Poster Status</option>
+                <option value="1">Ready</option>
+                <option value="0">Pending</option>
             </select>
         </div>
         <div class="form-group"><input autofocus class="form-control" name="expenditure" placeholder="Expenditure" type="text"/>
