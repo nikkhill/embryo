@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-lg-6">
-        <table class="table table-striped table table-hover">
+        <table id="stable" class="table table-striped table table-hover">
             <thead>
                 <tr>
                     <th>Name</th>
@@ -168,6 +168,10 @@
                 $("#add_button").hide();
                 form.show();
             }
+
+            $(document).ready(function(){
+                $('#stable').DataTable();
+            });
         </script>
 
 
