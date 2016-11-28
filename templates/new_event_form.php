@@ -19,7 +19,6 @@
             <select autofocus class="form-control" id="select_confirmation_status" name="confirmation_status">
                 <option value="null">Confirmation Status</option>
                 <option value="Pending">Pending</option>
-                <option value="Confirmed">Confirmed</option>
                 <option value="Rejected">Rejected</option>
             </select>
         </div>
