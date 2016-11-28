@@ -10,7 +10,7 @@
      */
 
     // your database's name
-    define("DATABASE", "embryo_2");
+    define("DATABASE", "embryo_data");
 
     // your database's password
     define("PASSWORD", "crimson");

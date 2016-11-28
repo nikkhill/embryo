@@ -44,6 +44,7 @@ td{
         </div>
     </form>
     <form action = "edit_event_details.php" method = "GET">
+    <input type="hidden" name="type" value="edit">
     <input type="hidden" name="eid" value="<?=$info[0]["eid"]?>">
     <div class="form-group">
     <button type="submit" class="btn btn-default">Edit details</button>

@@ -1,6 +1,6 @@
 <div class="row">
-    <div class="col-lg-6">
-        <table class="table table-striped table table-hover">
+    <div class="col-lg-12">
+        <table id="etable" class="table table-striped table table-hover">
             <thead>
                 <tr>
                     <th>Speaker</th>
@@ -49,4 +49,9 @@
         </table>
     </div>
 </div>
+<script>
+    $(document).ready(function(){
+        $('#etable').DataTable();
+    });
+</script>
 

@@ -15,6 +15,7 @@
 	}
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST")  {
+
         if (empty($_POST["eid"])) {
 	    	apologize("Wrong Method");
 	    }
@@ -29,12 +30,17 @@
         }
         else if($_POST["type"] == "edit")
         {
+        	apologize("added");
 			if (empty($_POST["topic"])) {
 				apologize("No topic provided!");
 			}
 			else {
-				query("UPDATE event SET topic=?, event_date=?, type=?, room=?, video_status=?, article_status=?, poster_status=?, expenditure=? WHERE eid=?", $_POST["topic"], $_POST["event_date"], $_POST["type"], $_POST["room"], $_POST["video_status"], $_POST["article_status"], $_POST["poster_status"], $_POST["expenditure"], $_POST["eid"]);
+
+				query("UPDATE event SET topic=?, event_date=?, type=?, room=?, video_status=?, article_status=?, poster_status=?, expenditure=? WHERE eid=?", $_POST["topic"], $_POST["event_date"], $_POST["event_type"], $_POST["room"], $_POST["video_status"], $_POST["article_status"], $_POST["poster_status"], $_POST["expenditure"], $_POST["eid"]);
+
 			}
         }
+        apologize($_POST["type"]);
+        //render("apology.php", ["message" => "lol"]);
 		redirect("event_details.php?eid=".htmlspecialchars($_POST["eid"]));
 	}

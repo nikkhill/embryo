@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-lg-6">
         <h3>Upcoming Events</h3>
-        <table class="table table-striped table table-hover">
+        <table id="hetable" class="table table-striped table table-hover">
             <thead>
                 <tr>
                     <th>Speaker</th>
@@ -24,12 +24,13 @@
     </div>
     <div class="col-lg-6">
         <h3>Pending Proposals</h3>
-        <table class="table table-striped table table-hover">
+        <table id="hptable" class="table table-striped table table-hover">
             <thead>
                 <tr>
                     <th>Speaker</th>
                     <th>Proposed Topic</th>
                     <th>View Info</th>
+                    <th>Confirm</th>
                 </tr>
             </thead>
             <tbody>
@@ -45,3 +46,9 @@
         </table>
     </div>
 </div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#hetable').DataTable();
+        $('#hptable').DataTable();
+    });
+</script>

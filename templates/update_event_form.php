@@ -7,7 +7,7 @@
         <div class="form-group">Event date:<br><input autofocus class="form-control" name="event_date" type="date" value="<?= $row['event_date']?>"/>
         </div>  
         <div class="form-group">
-            <select autofocus class="form-control" name="type">
+            <select autofocus class="form-control" name="event_type">
                 <option value="0">Select Event Type</option>
                 <?php
                     $erows = query("SELECT typeid, type FROM event_type");
