@@ -15,4 +15,21 @@ td{
         print("");
         print("</table>");
     ?>
+    <?php
+        if($info[0]["confirmation_status"]==='Pending')
+        {
+        print('<form action = "update_proposed_event.php" method = "GET">');
+        print('<input type="hidden" name="peid" value="'.$info[0]["peid"].'">');
+        print('<div class="form-group">');
+        print('<button type="submit" class="btn btn-default">Change Status To Rejected</button>');
+        print('</div>');
+        print('</form>');
+        print('<form action = "confirm_event_details.php" method = "GET">');
+        print('<input type="hidden" name="peid" value="'.$info[0]["peid"].'">');
+        print('<div class="form-group">');
+        print('<button type="submit" class="btn btn-default">Confirm</button>');
+        print('</div>');
+        print('</form>');
+        }
+    ?>
 </div>
