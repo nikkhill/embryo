@@ -29,9 +29,17 @@
             if (crypt($_POST["password"], $row["hash"]) == $row["hash"])
             {
                 // remember that user's now logged in by storing user's ID in session
-                $_SESSION["id"] = $row["id"];
 
-                redirect("./");
+                if ($row["account_status"] == 1) {
+
+                    $_SESSION["id"] = $row["id"];
+
+                    redirect("./");
+                }
+                else {
+                    apologize("Membership not approved yet!");
+                }
+
             }
         }
 

@@ -2,4 +2,4 @@
     <?= htmlspecialchars($message) ?>
 </p>
 
-<a href="?redirect($page)" >Back</a>
+<a href="<?= $page?>" >Back</a>

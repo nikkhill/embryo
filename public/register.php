@@ -41,10 +41,11 @@
         }
         else
         {
-            $rows = query("SELECT LAST_INSERT_ID() AS id");
-            $id = $rows[0]["id"];
-            $_SESSION["id"] = $id;
-            redirect("index.php");
+            // $rows = query("SELECT LAST_INSERT_ID() AS id");
+            // $id = $rows[0]["id"];
+            // $_SESSION["id"] = $id;
+            // redirect("index.php");
+            successmessage("Registered. Approval still pending!", "login.php");
         }
     }
     else

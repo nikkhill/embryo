@@ -48,7 +48,7 @@ td{
     <form action = "delete_speaker.php" method = "GET">
         <input type="hidden" name="sid" value="<?= $id?>">
         <div class="form-group">
-         <button type="submit" class="btn btn-default">Delete</button>
+         <button type="submit" class="btn btn-danger">Delete</button>
         </div>
     </form>
 </div>

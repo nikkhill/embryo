@@ -59,8 +59,22 @@
         </table>
         <form hidden action="approve_member.php" method="post" id="approve_form">
             <fieldset>
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <input autofocus class="form-control" name="role" placeholder="Role" type="text"/>
+                </div> -->
+                <div class="form-group">
+                    <select class="form-control" name="role">
+                      <option id="o1" value="President">President</option>
+                      <option id="o2" value="Secretary">Secretary</option>
+                      <option id="o3" value="Comm_Head">Comm_Head</option>
+                      <option id="o4" value="EM_Head">EM_Head</option>
+                      <option id="o5" value="EB_Head">EB_Head</option>
+                      <option id="o6" value="Tech_Head">Tech_Head</option>
+                      <option id="o7" value="Comm">Comm</option>
+                      <option id="o8" value="EM">EM</option>
+                      <option id="o9" value="EB">EB</option>
+                      <option id="o10" value="Tech">Tech</option>
+                    </select>
                 </div>
                 <div hidden class="form-group">
                     <input autofocus class="form-control" id="idblock" name="id" type="text"/>

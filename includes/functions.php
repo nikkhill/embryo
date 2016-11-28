@@ -22,7 +22,7 @@
     
     function successmessage($message,$page)
     {
-        render("success.php", ["message"=>$message], ["page"=>$page]);
+        render("success.php", ["message"=>$message, "page"=>$page]);
         exit;
     }
 
