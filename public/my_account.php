@@ -5,7 +5,7 @@
 		$info = query("SELECT id, member_id, name, phone_no, role, account_status FROM embryo_members WHERE id=?", $_SESSION["id"]);      
   
 
-	    render("my_account_display.php", ["title" => "My Account", "info" => $info[0]]);
+	    render("my_account_display.php", ["title" => "Hi ".$info[0]["name"]."!", "info" => $info[0]]);
 	}
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST")  {

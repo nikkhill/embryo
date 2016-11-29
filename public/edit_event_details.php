@@ -30,7 +30,7 @@
         }
         else if($_POST["type"] == "edit")
         {
-        	apologize("added");
+        	//apologize("added");
 			if (empty($_POST["topic"])) {
 				apologize("No topic provided!");
 			}
@@ -40,7 +40,7 @@
 
 			}
         }
-        apologize($_POST["type"]);
+        //apologize($_POST["type"]);
         //render("apology.php", ["message" => "lol"]);
 		redirect("event_details.php?eid=".htmlspecialchars($_POST["eid"]));
 	}

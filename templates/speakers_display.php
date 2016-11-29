@@ -169,9 +169,9 @@
                 form.show();
             }
 
-            $(document).ready(function(){
-                $('#stable').DataTable();
-            });
+            // $(document).ready(function(){
+            //     $('#stable').DataTable();
+            // });
         </script>
 
 
